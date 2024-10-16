@@ -7,7 +7,7 @@ public enum Race{
 
     private final String name;
     private final boolean immortal;
-    private Alignment alignment;
+    private final Alignment alignment;
 
     Race(String name, boolean immortal, Alignment alignment){
         this.name = name;

@@ -77,4 +77,13 @@ public class DataService {
         ringBearers.put(Ring.vilya, elrond);
         return ringBearers;
     }
+
+    public boolean update(){
+        try{
+            Thread.sleep(2000);
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        return true;
+    }
 }

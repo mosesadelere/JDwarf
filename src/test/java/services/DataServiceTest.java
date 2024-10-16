@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.model.Race.HOBBIT;
 import static org.model.Race.MAIA;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
@@ -121,5 +122,10 @@ class DataServiceTest {
         List<TolkienCharacter> fellowship = dataService.getFellowship();
 
         assertThrows(IndexOutOfBoundsException.class, () -> fellowship.get(20));
+    }
+
+    @Test
+    void ensureServiceDoesNotRunTooLong(){
+        assertTimeout(Duration.ofSeconds(3), () -> dataService.update());
     }
 }
