@@ -1,15 +1,15 @@
 package org.model;
 
 public enum Race{
-    HOBBIT("Hobbit", false, Movie.Alignment.GOOD), MAIA("Maia", true, Movie.Alignment.GOOD),
-    MAN("Man", false, Movie.Alignment.NEUTRAL), ELF("Elf", true, Movie.Alignment.GOOD),
-    DWARF("Dwarf", false, Movie.Alignment.GOOD), ORC("Orc", false, Movie.Alignment.EVIL);
+    HOBBIT("Hobbit", false, Alignment.GOOD), MAIA("Maia", true, Alignment.GOOD),
+    MAN("Man", false, Alignment.NEUTRAL), ELF("Elf", true, Alignment.GOOD),
+    DWARF("Dwarf", false, Alignment.GOOD), ORC("Orc", false, Alignment.EVIL);
 
     private final String name;
     private final boolean immortal;
-    private Movie.Alignment alignment;
+    private Alignment alignment;
 
-    Race(String name, boolean immortal, Movie.Alignment alignment){
+    Race(String name, boolean immortal, Alignment alignment){
         this.name = name;
         this.immortal = immortal;
         this.alignment = alignment;
@@ -23,7 +23,7 @@ public enum Race{
         return immortal;
     }
 
-    public Movie.Alignment getAlignment(){
+    public Alignment getAlignment(){
         return alignment;
     }
 
